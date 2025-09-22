@@ -1,0 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.stringobject;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class StringObject {
+
+    public static void main(String[] args) {
+        //String Object
+        String strKV = new String ("Katelyn Vadukoot");
+        System.out.println("My name is " + "\" " + (strKV) +"\"" );
+        //My name length
+        System.out.println("My name length is " + " " + 16);
+        //My name in uppercase 
+        System.out.println("My name in upper case is " + "\"" + strKV.toUpperCase() + "\"");
+        //My name in lowercase
+        System.out.println("My name in lowercase is " + "\"" + strKV.toLowerCase() + "\"");
+        //First letter in my name
+        System.out.println("The first letter in my name is " + "\"" + strKV.charAt(0) + "\"");
+        //Last letter in my name
+        System.out.println("The last letter in my name is " + "\"" + strKV.charAt(strKV.length() - 1));
+        //Index of the space between the names
+        System.out.println("The index of the space between the names is " + "\"" + strKV.indexOf(' '));
+        
+        
+        
+    }
+} 
