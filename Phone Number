@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.randomnumber;
+
+import java.util.Random;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class RandomNumber {
+
+    public static void main(String[] args) {
+        //Declare the random number generator
+        Random generator = new Random();
+        
+        //First 3 numbers 
+        int num1;
+        int num2;
+        int num3;
+        num1 = generator.nextInt(8);
+        System.out.println("A random integer: " + num1);
+        num2 = generator.nextInt(8);
+        System.out.println("A random integer: " + num2);
+        num3 = generator.nextInt(8);
+        System.out.println("A random integer:" + num3);
+        
+        //Second set of numbers
+        int num4tonum6;
+        num4tonum6 = generator.nextInt(655);
+        
+        //Third set of numbers
+        int num7tonum10;
+        num7tonum10 = generator.nextInt(1505);
+        
+        System.out.println("Phone number " + num1 + num2 + num3 + "-" + num4tonum6 + "-" + num7tonum10);
+        
+        
+        
+        
+    }
+}
