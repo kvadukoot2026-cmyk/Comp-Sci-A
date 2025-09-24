@@ -1,0 +1,26 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.randomnumberdice;
+
+import java.util.Random;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class RandomNumberDice {
+
+    public static void main(String[] args) {
+        
+        Random generator = new Random();
+        
+        int dice1;
+        dice1 = generator.nextInt(6)+1;
+        System.out.println("A random dice roll " + dice1);
+        
+        
+        
+    }
+}
