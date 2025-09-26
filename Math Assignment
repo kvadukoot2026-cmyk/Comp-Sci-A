@@ -1,0 +1,77 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.mathassignment;
+
+import java.util.Random;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class MathAssignment {
+
+    public static void main(String[] args) {
+       // Declare random number generator
+       Random generator = new Random();
+       // Number 1
+       // Produce a random integer between 0 and 90
+       int num0tonum90;
+       num0tonum90 = generator.nextInt(90);
+       System.out.println("A random integer " + num0tonum90);
+       // Find the sine for the number
+       double sin1 = Math.sin((double)num0tonum90);
+       String sin1d = "" + roundAvoid((sin1), 3);
+       //Print the sine
+       System.out.println (" sine: " + sin1d);
+       //Find the cosine
+       double cos1 = Math.cos((double)num0tonum90);
+       String cos1k = "" + roundAvoid((cos1), 3);
+       //Print the cosine
+       System.out.println(" cosine: " + cos1k);
+       //Find the tangent
+       double tan1 = Math.tan ((double)num0tonum90);
+       String tan1r = "" + roundAvoid((tan1), 3);
+       //Print the tan
+       System.out.println(" tan: " + tan1r);
+       
+       //Number 2 
+       int num1;
+       num1 = generator.nextInt(20);
+       System.out.println("A random integer " + num1);
+       double radius;
+       radius = generator.nextDouble(20)+1;
+       double pi = Math.PI;
+       //Formula for area of circle
+       double area = (pi *radius *radius);
+       System.out.println("The area of a circle is "+ area); 
+       double roundarea = roundAvoid(area, 3);
+       double volume = ((4.0/3.0) * pi * area * radius);
+       System.out.println(" The volume of a sphere is " + volume);
+       double roundvolume = roundAvoid(volume, 3);
+       
+       //Number 3
+       int num2;
+       num2 = generator.nextInt(99999000)+1000;
+       
+       
+       
+       
+       
+       
+       
+       
+      
+       
+               
+    }
+    
+    public static double roundAvoid(double value, int places) {
+        double scale = Math.pow(10, places);
+        return Math.round(value * scale) / scale;
+
+    }
+    
+    
+}
