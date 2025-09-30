@@ -5,6 +5,7 @@
 package com.mycompany.mathassignment;
 
 import java.util.Random;
+import java.util.scanner;
 
 /**
  *
@@ -54,7 +55,35 @@ public class MathAssignment {
        //Number 3
        int num2;
        num2 = generator.nextInt(99999000)+1000;
-       
+       double roundnum2 = roundAvoid(num2, 1);
+       System.out.println("A random integer " + num2);
+       //The square root of the number
+       double squareRoot = roundAvoid(Math.sqrt(roundnum2), 5);
+       System.out.println("The square root is " + squareRoot);
+       //Natural log of the random number
+       double naturalLog = roundAvoid(Math.log(roundnum2), 5);
+       System.out.println("The natural log is " + naturalLog);
+       //Log 10 values of the random number
+       double log10 = roundAvoid(Math.log10(roundnum2), 5);
+       System.out.println("The log10 is " + log10);
+
+       //Number 4
+       double speedoflight = 299792458;
+       double joules = 1.0;
+       //Find c squared
+       double csquared = (speedoflight * speedoflight);
+       double roundcsquared = roundAvoid(csquared, 3);
+       System.out.println("C squared is " + roundcsquared);
+       double mass = (roundnum2/roundcsquared);
+       System.out.println("The mass is " + mass);
+
+       //Number 5
+       System.out.println("Type a real number value");
+       double scan2 = scanner.nextDouble();
+       System.out.println("Type a integer");
+       int scan3 = scanner.nextInt();
+       System.out.println("How many dcimal places to round to");
+       int scan4 = scanner.nextInt();
        
        
        
