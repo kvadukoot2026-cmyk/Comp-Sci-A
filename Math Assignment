@@ -84,7 +84,10 @@ public class MathAssignment {
        int scan3 = scanner.nextInt();
        System.out.println("How many dcimal places to round to");
        int scan4 = scanner.nextInt();
-       
+       double answer = Math.pow(scan2, scan3);
+       double scale = Math.pow(10, scan4);
+       double roundanswer = Math.round(answer* scale) / scale;
+       System.out.println("The result is: " + roundanswer);
        
        
        
