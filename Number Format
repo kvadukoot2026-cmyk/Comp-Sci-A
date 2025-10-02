@@ -1,0 +1,45 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.numberformat;
+
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Locale;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class NumberFormat {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in); 
+        //Number 1 
+        //Ask for total number of students at Cathedral
+        System.out.println("How many students attend Cathedral?");
+        int students = scan.nextInt();
+        //Ask for the number of girls
+        System.out.println("How many girls are at Cathedral?");
+        int girlstudents = scan.nextInt();
+        //Number of boys at Cathedral
+        int boystudents = students - girlstudents;
+        System.out.println("The number of boy students is " + boystudents);
+        //Percentage of girls at Cathedral
+        double percentofgirls;
+        System.out.println("The percent of girls at Cathdral is " + ((double)girlstudents/students));
+        //Percent of boys at Cathedral
+        double percentofboys;
+        System.out.println("The percent of boys at Cathedral is " + ((double)boystudents/students));
+       
+        //Number 2
+        System.out.println("What is the total amount of money in dollars and cents? ");
+        NumberFormat fmt1 = NumberFormat.getCurrencyInstance(Locale.UK);
+        double GBPexchangerate = 0.75;
+        
+        
+        
+        
+    }
+}
