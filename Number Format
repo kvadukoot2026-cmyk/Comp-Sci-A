@@ -52,7 +52,7 @@ public class NumberFormat {
         
         
         //Number 4
-        int number2 = generator.nextInt(999e18)+ 100000000;
+        
         
         
     }
