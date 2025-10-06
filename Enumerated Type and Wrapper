@@ -1,0 +1,30 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.enumeratedtypeandwrapperclassassignment;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class EnumeratedTypeandWrapperClassAssignment {
+
+    public static void main(String[] args) {
+        
+       enum days{Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}
+       daysOftheWeek day1, day2, day3, day4, day5, day6, day7;
+       
+       day1 = daysOftheWeek.Sunday;
+       day2 = daysOftheWeek.Monday;
+       day3 = daysOftheWeek.Tuesday;
+       day4 = daysOftheWeek.Wednesday;
+       day5 = daysOftheWeek.Thursday;
+       day6 = daysOftheWeek.Friday;
+       day7 = daysOftheWeek.Saturday;
+       
+       System.out.println
+               
+       
+    }
+}
