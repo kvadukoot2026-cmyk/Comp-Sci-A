@@ -71,7 +71,9 @@ public class EnumeratedTypeandWrapperClassAssignment {
        
        //Number2
        
-       
+       //Declare Scanner
+       Scanner scan = new Scanner(System.in); 
+       System.out.println("What is your CCHS username");
        
     }  
 }
