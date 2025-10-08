@@ -10,21 +10,68 @@ package com.mycompany.enumeratedtypeandwrapperclassassignment;
  */
 public class EnumeratedTypeandWrapperClassAssignment {
 
+    enum day{Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}
+    enum month{January, February, March, April, May, June, July, August, September, October, November, December}
+   
     public static void main(String[] args) {
         
-       enum days{Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}
-       daysOftheWeek day1, day2, day3, day4, day5, day6, day7;
+     //Number 1
+ 
+       //Declare the days of the week 
+       day day1, day2, day3, day4, day5, day6, day7;
        
-       day1 = daysOftheWeek.Sunday;
-       day2 = daysOftheWeek.Monday;
-       day3 = daysOftheWeek.Tuesday;
-       day4 = daysOftheWeek.Wednesday;
-       day5 = daysOftheWeek.Thursday;
-       day6 = daysOftheWeek.Friday;
-       day7 = daysOftheWeek.Saturday;
+       day1 = day.Sunday;
+       day2 = day.Monday;
+       day3 = day.Tuesday;
+       day4 = day.Wednesday;
+       day5 = day.Thursday;
+       day6 = day.Friday;
+       day7 = day.Saturday;
        
-       System.out.println
-               
+       //Print all the days of the week 
+       System.out.println ("The days of the week in order(1-7) are");
+       System.out.println(" day" + (day1.ordinal()+1) + ":" + day1 );
+       System.out.println(" day" + (day2.ordinal()+1) + ":" + day2);
+       System.out.println(" day" + (day3.ordinal()+1) + ":" + day3);
+       System.out.println(" day" + (day4.ordinal()+1) + ":" + day4);
+       System.out.println(" day" + (day5.ordinal()+1) + ":" + day5);
+       System.out.println(" day" + (day6.ordinal()+1) + ":" + day6);
+       System.out.println(" day" + (day7.ordinal()+1) + ":" + day7);
        
-    }
+       //Declare the months of the year 
+       month month1, month2, month3, month4, month5, month6, month7, month8, month9, month10, month11, month12;
+       
+       month1 = month.January;
+       month2 = month.February;
+       month3 = month.March;
+       month4 = month.April;
+       month5 = month.May;
+       month6 = month.June;
+       month7 = month.July;
+       month8 = month.August;
+       month9 = month.September;
+       month10 = month.October;
+       month11= month.November;
+       month12= month.December;
+       
+       //Print out all the months
+       System.out.println("The months of the year in order (1-12) are");
+       System.out.println(" month" + (month1.ordinal()+1) + ":" + month1 );
+       System.out.println(" month" + (month2.ordinal()+1) + ":" + month2 );
+       System.out.println(" month" + (month3.ordinal()+1) + ":" + month3 );
+       System.out.println(" month" + (month4.ordinal()+1) + ":" + month4 );
+       System.out.println(" month" + (month5.ordinal()+1) + ":" + month5 );
+       System.out.println(" month" + (month6.ordinal()+1) + ":" + month6 );
+       System.out.println(" month" + (month7.ordinal()+1) + ":" + month7 );
+       System.out.println(" month" + (month8.ordinal()+1) + ":" + month8 );
+       System.out.println(" month" + (month9.ordinal()+1) + ":" + month9 );
+       System.out.println(" month" + (month10.ordinal()+1) + ":" + month10 );
+       System.out.println(" month" + (month11.ordinal()+1) + ":" + month11 );
+       System.out.println(" month" + (month12.ordinal()+1) + ":" + month12 );
+       
+       //Number2
+       
+       
+       
+    }  
 }
