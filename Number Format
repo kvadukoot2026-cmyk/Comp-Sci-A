@@ -34,8 +34,25 @@ public class NumberFormat {
         System.out.println("The percent of boys at Cathedral is " + ((double)boystudents/students));
        
         //Number 2
-        
-
+        NumberFormat pounds = NumberFormat.getCurrencyInstance(Locale.UK);
+        NumberFormat euros = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        //Ask for total amount in dollars
+        System.out.println("What is the total amount of money in dollars and cents? ");
+        double totalusd = scan.nextDouble();
+         //Convert to British pounds
+        double gpbconversion = 0.75;
+        //Print
+        System.out.println("The exchange rate from U.S. dollars to pounds is $1 to .75 pence");
+        double totalpounds = totalusd * gpbconversion;
+        //Print
+        System.out.println("You have " + pounds.format(totalpounds) + "British pounds");
+        //Convert to Euros
+        double euroconversion = 0.86;
+        //Print
+        System.out.println("The exchange rate from U.S. dollars to euros is $1 to 86 eCents ");
+        double totaleuros = totalusd * euroconversion;
+        //Print
+        System.out.println("You have " + euros.format(totaleuros) + "Euros"); 
 
 
 
