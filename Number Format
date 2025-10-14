@@ -34,9 +34,7 @@ public class NumberFormat {
         System.out.println("The percent of boys at Cathedral is " + ((double)boystudents/students));
        
         //Number 2
-        System.out.println("What is the total amount of money in dollars and cents? ");
-        NumberFormat fmt1 = NumberFormat.getCurrencyInstance(Locale.UK);
-        double GBPexchangerate = 0.75;
+        
 
 
 
@@ -52,7 +50,14 @@ public class NumberFormat {
         
         
         //Number 4
-        
+        //Declare generator
+        Random generator = new Random();
+        // Generate random number
+        double randomnumber = generator.nextDouble(999e18 - 100000000)+ 100000000; 
+        //Decimal format with no scientific notation
+        DecimalFormat decimal = new DecimalFormat("");
+        //Print the number
+        System.out.println("Your random very large number is: " + decimal.format(randomnumber));
         
         
     }
