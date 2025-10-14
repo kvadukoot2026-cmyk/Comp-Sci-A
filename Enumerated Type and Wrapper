@@ -74,6 +74,22 @@ public class EnumeratedTypeandWrapperClassAssignment {
        //Declare Scanner
        Scanner scan = new Scanner(System.in); 
        System.out.println("What is your CCHS username");
+       Scanner scan = new Scanner(System.in);
+       //Ask for the username
+       System.out.println("What is your CCHS username");
+       String fullInfo = scan.nextLine();
+       //Take out grad year from the full info
+       String grad = fullInfo.substring((fullInfo.length()) -4);
+       //Make the grad year a integer
+       int gradint = Integer.parseInt(grad);
+       //Print
+       System.out.println("Your graduation year is: " + gradint);
+       //Print the year after graduation
+       System.out.println("The year after you graduate is: " + (gradint+1));
+       // Change grad year into binary
+       String binary = Integer.toBinaryString(gradint);
+       //Print
+       System.out.println("In computer language you will graduate in: " + binary);
        
     }  
 }
