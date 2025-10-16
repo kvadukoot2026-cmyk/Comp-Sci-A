@@ -1,0 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.anatomyofaclass;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class AnatomyofaClass {
+
+    public static void main(String[] args) {
+        
+        //Number 1: The difference between a class and and a object is that a class is a blueprint for the for creating the object. It can represent state in variables and behaviors in methods. The object is the instance of a class. The object is in the class.
+        //Number 2: When an object is passed to a print or println method, it automatically calls for the string method. 
+        //Number 3: In a method the variables are stated directly in it. The variables are only referenced in that method. In a class the data can be referenced anywhere in the class.
+        
+        //Number 4
+        
+        Car VWBug = new Car("VW Bug", 90, 85.0, 15000.00);
+        Car ToyotaPrius = new Car("Toyota Prius", 194, 112.0, 15475.00);
+        Car BMWI8 = new Car("BMWI8", 369, 155.0, 53884.00);
+        Car TeslaModel3 = new Car ("TeslaModel3", 510, 163.0, 36990.00);
+        
+        System.out.println(VWBug);
+        System.out.println(ToyotaPrius);
+        System.out.println(BMWI8);
+        System.out.println(TeslaModel3);
+        
+        
+    }
+}
+
+class Car{
+    private String carBrand;
+    private int enginePower;
+    private double maxSpeed;
+    private double cost;
+
+    public Car(String inBrand, int inenginepower, double inmaxspeed, double incost){
+        carBrand = inBrand;
+        enginePower = inenginepower;
+        maxSpeed = inmaxspeed;
+        cost = incost;
+    
+    }       
+}
