@@ -1,0 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.interestrateassignment;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class InterestRateAssignment {
+
+    public static void main(String[] args) {
+       //Make a scanner
+       Scanner scan = new Scanner(System.in); 
+       
+       System.out.println("Input financial amount");
+       double amount = scan.nextDouble(); 
+       
+       System.out.println("How many months for repayment?");
+       int months = scan.nextInt(); 
+       
+       
+    }
+    class IntrestRateCalculator{
+        
+    
+}
+}
