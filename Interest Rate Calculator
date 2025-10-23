@@ -4,6 +4,9 @@
 
 package com.mycompany.interestrateassignment;
 
+import java.util.Scanner;
+import java.util.Locale;
+import java.text.NumberFormat;
 /**
  *
  * @author KVadukoot2026
@@ -13,17 +16,63 @@ public class InterestRateAssignment {
     public static void main(String[] args) {
        //Make a scanner
        Scanner scan = new Scanner(System.in); 
-       
+       //Formatting
+       NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.US);
+       //Ask user to input amount of money
        System.out.println("Input financial amount");
        double amount = scan.nextDouble(); 
-       
+       //Ask user to input number of months 
        System.out.println("How many months for repayment?");
-       int months = scan.nextInt(); 
+       int months = scan.nextInt();
+       //Create interest rate calculator 
+       InterestRateCalculator calc = new InterestRateCalculator(amount, months);
+       //Print
+       System.out.println("\nIntial Amount is " + currency.format(amount));
+       
+    
        
        
+       
+       System.out.println("" + currency.format(calc.repayment()));
+       System.out.println("" + currency.format(calc.monthlyAmount()));
+       
+        }
     }
-    class IntrestRateCalculator{
+class InterestRateCalculator{
+       
+        
+        public static final double RATE = 0.05;
+        
+        //Private variables 
+        private double amountPaid;
+        private double monthlyPayment;
+        private double amount;
+        private final int months;
+        private double overallPayment;
+        InterestRateCalculator(double inAmount, int inMonths){
+            
+            amount = inAmount;
+            months = inMonths;
+               
+        }
+        
+        
+        public double repayment(){
+            
+            overallPayment = amount*(1+ RATE);
+           
+           
+            
+            
+            
+            return overallPayment; 
+        }
+        
+        public double monthlyAmount(){
+             monthlyPayment = overallPayment/months;
+             
+             return monthlyPayment;
+        }
         
     
-}
 }
