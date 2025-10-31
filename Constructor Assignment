@@ -1,0 +1,90 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.constructorsassignment;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class ConstructorsAssignment {
+
+    public static void main(String[] args) {
+       Course course1 = new Course ("Computer Science", "AP", 100, "Mr.Nelson");
+       Course course2 = new Course ("Literature", "AP", 100, "Mrs.Milligan");
+       Course course3 = new Course ("Government", "AP", 100, "Mr.B");
+       Course course4 = new Course ("Physics", "AP", 100, "Mrs.Rafie");
+       
+       
+       
+       
+       
+       
+       System.out.println(course1);
+       System.out.println(course2);
+       System.out.println(course3);
+       System.out.println(course4);
+      
+    }
+}
+
+class Course{
+    private String courseTitle;
+    private String courseCode;
+    private int pointsTotal;
+    private String instructorName; 
+    
+    public Course(String inTitle){
+        courseTitle = inTitle; 
+    }
+    
+    public Course(String inTitle, String inCode, int inpointsTotal, String ininstructorName){
+
+        courseTitle = inTitle; 
+        courseCode = inCode;
+        pointsTotal = inpointsTotal;
+        instructorName = ininstructorName;
+    
+    }
+    // Accessor and Mutator for Course Title
+     public String getcourseTitle(){
+         return courseTitle;
+     }
+     
+     public void setcourseTitle(String courseTitle){
+         this.courseTitle = courseTitle;
+     }
+    // Accessor and Mutator for Course Code
+     public String getcourseCode(){
+         return courseCode;
+     }
+     
+     public void setcourseCode(String courseCode){
+         this.courseCode = courseCode;
+     }
+     // Accessor and Mutator for Points Total
+     public int getpointsTotal(){
+         return pointsTotal;
+     }
+     
+     public void setpointsTotal(int pointsTotal){
+         this.pointsTotal = pointsTotal;
+     }
+     // Accessor and Mutator for Instructor Name
+     public String getinstructorName(){
+         return instructorName;
+     }
+     
+     public void setinstructorName(String instructorName){
+         this.instructorName = instructorName;
+     }
+     
+     //String to print
+     @Override
+     public String toString(){
+         return "Course Title:" + courseTitle + "\n Course Code:" + courseCode + "\n Total Points:" + pointsTotal + "\n Instructors Name:" + instructorName;
+     }
+    
+    
+}
