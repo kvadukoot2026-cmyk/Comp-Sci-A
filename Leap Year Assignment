@@ -1,0 +1,25 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.leapyearassignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class LeapYearAssignment {
+
+    public static void main(String[] args) {
+      //Declare Scanner
+      Scanner scan = new Scanner (System.in);
+      
+      System.out.println("Enter a year");
+      
+      int year = scan.nextInt();
+      
+      boolean isleapYear = false;
+    }
+}
