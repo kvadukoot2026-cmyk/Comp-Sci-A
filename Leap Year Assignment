@@ -15,11 +15,26 @@ public class LeapYearAssignment {
     public static void main(String[] args) {
       //Declare Scanner
       Scanner scan = new Scanner (System.in);
-      
+      //Ask for input year
       System.out.println("Enter a year");
       
       int year = scan.nextInt();
       
+      //Boolean variable 
       boolean isleapYear = false;
+      
+      //Error message
+      if (year<1582){
+        System.out.println("ERROR. You have to enter a year that is 1582 or after ");  
+      }
+      
+      else{
+          //Leap year math
+          if (((year % 4 == 0) && (year % 100 != 0)) || ((year % 100 == 0) && (year % 400 == 0))){
+             isleapYear = true; 
+             System.out.println("It is a leap year");
+          }
+             
+          }    
+      }
     }
-}
