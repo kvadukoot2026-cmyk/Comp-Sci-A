@@ -1,0 +1,92 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.mystore;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class MyStore {
+
+     public static final double MAX_BUDGET = 250.00;
+     
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner (System.in);
+       
+        //Items in the store
+        Item TShirt = new Item ("T Shirt", 29.99);
+        Item Shoes = new Item ("Shoes", 125.99);
+        Item Jeans = new Item ("Jeans", 60.99);
+        Item Jacket = new Item ("Jacket", 250.00);
+        Item Hat = new Item ("Hat", 25.99);
+        Item Shorts = new Item ("Shorts", 27.99);
+        Item Blouse = new Item ("Blouse", 88.99);
+        
+        System.out.println(TShirt);
+        System.out.println(Shoes);
+        System.out.println(Jeans);
+        System.out.println(Jacket);
+        System.out.println(Hat);
+        System.out.println(Shorts);
+        System.out.println(Blouse);
+    
+        //Variables
+        int count = 0;
+        double total = 0.0;
+        
+        
+        //Shopping loop
+        while(total<MAX_BUDGET){
+            System.out.println("Enter the item you want to buy and press enter when you are done");
+            String item = scan.nextLine();
+            
+            if(item.equals(TShirt.getstrName())){
+                System.out.println("You bought a T Shirt");
+                total = total + TShirt.getdblPrice();
+                count ++;
+                
+            }
+            
+            else if(item.equals(Shoes.getstrName()));
+                System.out.println("You bought shoes");
+                total = total + Shoes.getdblPrice();
+                count ++;
+        }
+        
+     
+        
+        
+    } 
+    }
+
+
+class Item{
+    public String strName;
+    public double dblPrice ;
+    
+    public Item(String instrName, double indblPrice){
+        strName = instrName;
+        dblPrice = indblPrice;
+        
+    }
+    
+    public String getstrName(){
+       return strName;
+    }
+    
+     public double getdblPrice(){
+        return dblPrice;
+    }
+     
+      public void setdblPrice(double dblPrice){
+        this.dblPrice = dblPrice;
+    }
+      
+      
+      
+      }
