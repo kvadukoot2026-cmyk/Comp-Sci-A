@@ -1,0 +1,41 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.shoppinglist;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class ShoppingList {
+
+    public static void main(String[] args) {
+        //Declare Scanner
+        Scanner scan = new Scanner (System.in);
+        //Create Array
+        ArrayList<String> list = new ArrayList<>();
+      
+        while(true){
+           System.out.println("Give the list of items you need (type Stop when finished) ");
+           String item = scan.nextLine().trim();
+           if (item.equalsIgnoreCase("Stop")) break;
+           if (!item.isEmpty()){
+               list.add(item);
+           }
+           
+           
+        }
+        
+        if(list.isEmpty());{
+            System.out.println("Your shopping list is empty");
+            scan.close();
+            return;
+            
+    }  
+        
+    }
+}
