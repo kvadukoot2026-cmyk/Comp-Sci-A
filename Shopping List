@@ -18,7 +18,8 @@ public class ShoppingList {
         Scanner scan = new Scanner (System.in);
         //Create Array
         ArrayList<String> list = new ArrayList<>();
-      
+     
+        
         while(true){
            System.out.println("Give the list of items you need (type Stop when finished) ");
            String item = scan.nextLine().trim();
@@ -30,12 +31,64 @@ public class ShoppingList {
            
         }
         
-        if(list.isEmpty());{
+        if(list.isEmpty()){
             System.out.println("Your shopping list is empty");
             scan.close();
             return;
             
-    }  
-        
     }
-}
+        System.out.println("\nShopping List");
+        for (int i = 0; i < list.size(); i++){
+            System.out.println((i+1)+ "." + list.get(i));
+        }
+        
+        while (!list.isEmpty()){
+            System.out.print("\nDo you want to remove an item? (yes/no)");
+            String answer = scan.nextLine().trim();
+            
+            if (answer.equalsIgnoreCase("no")) break;
+            
+            if (!answer.equalsIgnoreCase("yes")){
+                System.out.println("Type yes or no");
+                continue;
+            }
+            
+            System.out.print("Remove item number:");
+            String input = scan.nextLine().trim();
+            
+            int number;
+            try {
+                number = Integer.parseInt(input);
+            
+                if (number < 1 || number > list.size() ){
+                System.out.println("Error. Choose a number between 1" + list.size());
+                continue;
+            }
+            }
+            
+            catch(NumberFormatException e){
+                System.out.println("Put in a valid number");
+                continue;
+            }
+            
+              String removed = list.remove(number -1);
+              System.out.println("Removed" + removed);
+        }
+              
+        
+            if(list.isEmpty()){
+                  System.out.println("Your shopping list has nothing in it");
+                  
+                }
+              
+              else{
+                 System.out.println("\nYour updated shopping list");
+                 for (int i = 0; i< list.size(); i++){
+                        System.out.println((i+1) + "." + list.get(i));
+                    }
+              }
+        
+    
+           
+            }
+        }
