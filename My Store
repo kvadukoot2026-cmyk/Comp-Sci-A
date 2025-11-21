@@ -19,14 +19,15 @@ public class MyStore {
         Scanner scan = new Scanner (System.in);
        
         //Items in the store
-        Item TShirt = new Item ("T Shirt", 29.99);
+        Item TShirt = new Item ("TShirt", 29.99);
         Item Shoes = new Item ("Shoes", 125.99);
         Item Jeans = new Item ("Jeans", 60.99);
         Item Jacket = new Item ("Jacket", 250.00);
         Item Hat = new Item ("Hat", 25.99);
         Item Shorts = new Item ("Shorts", 27.99);
         Item Blouse = new Item ("Blouse", 88.99);
-        
+
+//Print
         System.out.println(TShirt);
         System.out.println(Shoes);
         System.out.println(Jeans);
@@ -40,6 +41,7 @@ public class MyStore {
         double total = 0.0;
         
         
+        
         //Shopping loop
         while(total<MAX_BUDGET){
             System.out.println("Enter the item you want to buy and press enter when you are done");
@@ -47,22 +49,84 @@ public class MyStore {
             
             if(item.equals(TShirt.getstrName())){
                 System.out.println("You bought a T Shirt");
+               //cost of shirt
                 total = total + TShirt.getdblPrice();
                 count ++;
+               //The current balance for the shopper
+                System.out.println("Current balance:" + total);
+               //Number of items in their cart
+                System.out.println("Item count:" + count);
                 
             }
-            
-            else if(item.equals(Shoes.getstrName()));
+            //Same process as above for the rest of the things in the store
+            else if(item.equals(Shoes.getstrName())){
                 System.out.println("You bought shoes");
+                System.out.println(Shoes.getdblPrice());
+                //Have the total price with the Shoes and the TShirt
                 total = total + Shoes.getdblPrice();
                 count ++;
+                System.out.println("Current balance:" + total);
+                System.out.println("Item count:" + count);
+            }
+            
+            else if(item.equals(Jeans.getstrName())){
+                System.out.println("You bought jeans");
+                System.out.println(Jeans.getdblPrice());
+                total = total + Jeans.getdblPrice();
+                count ++;
+                System.out.println("Current balance:" + total);
+                System.out.println("Item count:" + count);
+            }
+            
+            else if (item.equals(Jacket.getstrName())){
+                System.out.println("You bought a jacket");
+                System.out.println(Jacket.getdblPrice());
+                total = total + Jacket.getdblPrice();
+                count ++;
+                System.out.println("Current balance:" + total);
+                System.out.println("Item count:" + count);
+            }
+            
+            else if (item.equals(Hat.getstrName())){
+                System.out.println("You bought a hat");
+                System.out.println(Hat.getdblPrice());
+                total = total + Hat.getdblPrice();
+                count ++;
+                System.out.println("Current balance:" + total);
+                System.out.println("Item count:" + count);
+            }
+            
+            else if (item.equals(Shorts.getstrName())){
+                System.out.println("You bought shorts");
+                System.out.println(Shorts.getdblPrice());
+                total = total + Shorts.getdblPrice();
+                count ++;
+                System.out.println("Current balance:" + total);
+                System.out.println("Item count:" + count);
+
+        
+   
+            }
+            
+            else if (item.equals(Blouse.getstrName())){
+                System.out.println("You bought a blouse");
+                System.out.println(Blouse.getdblPrice());
+                total = total + Blouse.getdblPrice();
+                count ++;
+                System.out.println("Current balance:" + total);
+                System.out.println("Item count:" + count);
+            }
+            //If the shopper doesn't type in the item properly
+            if (!found){
+                System.out.println("Item is not found.Type exactly how it is listed");
+            }
+            // Telling the shopper they went over budget
+            if (total >= MAX_BUDGET){
+                System.out.println("You went OVER BUDGET");
+            }
         }
-        
-     
-        
-        
-    } 
     }
+ }
 
 
 class Item{
@@ -85,8 +149,11 @@ class Item{
      
       public void setdblPrice(double dblPrice){
         this.dblPrice = dblPrice;
-    }
-      
-      
-      
       }
+      
+      @Override
+      public String toString(){
+          return strName + " - $" + dblPrice;
+          
+      }
+}
