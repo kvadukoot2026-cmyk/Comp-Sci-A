@@ -1,0 +1,90 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.loopsassignment;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class LoopsAssignment {
+
+    public static void main(String[] args) {
+        //State the number of maximum rows needed
+        final int MAX_ROWS = 10;
+        // Part a
+        System.out.println("a.");
+        //Start and the max rows and make it count downby 1 row every time
+        for (int row = MAX_ROWS; row >= 1; row--){
+        //Set the number of stars for each row
+            for (int star = 1; star <= row; star++){
+                //Print the stars and move to the next line
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //Part b
+         System.out.println("b.");
+         //This will be the same as part a but an inverted version
+         for (int row = 1; row <= MAX_ROWS; row++){
+        //The spaces before each line has to increase every time
+            for(int space = 1; space <= MAX_ROWS - row; space++){
+             System.out.print(" ");
+         }
+            for (int star = 1; star <= row; star++){
+                //Print the starts and move to next line
+                System.out.print("*");
+            }
+            System.out.println();
+    }
+         //Part c
+         System.out.println("c.");
+         //Start the same way as in part a
+         for (int row = MAX_ROWS; row >= 1; row --){
+             //Print spaces to move the stars to the right as each line prints
+             for(int space = 1; space <= MAX_ROWS - row; space++){
+             System.out.print(" ");
+             }
+             for (int star = 1; star <= row; star++){
+                 System.out.print("*");
+             }
+             System.out.println();
+         }
+         
+         System.out.println("d.");
+         //Set the number of rows needed
+         final int DIAMOND_ROW = 5;
+         //This is for half the diamond
+         //Make spaces before the star is printed
+         for (int row =1; row <= DIAMOND_ROW; row ++){
+             
+             for(int space = 1; space <= DIAMOND_ROW - row; space++){
+                 System.out.print(" ");
+             }
+             //Each line needs an odd number of stars
+             for (int star = 1; star <= 2*row - 1; star++){
+                 System.out.print("*");
+             }
+             
+             System.out.println();
+             
+         }
+         //This is for the other half of the diamond
+         for (int row = DIAMOND_ROW; row >= 1; row--){
+             for (int space = 1; space <= DIAMOND_ROW - row; space++){
+                 //Print the spaces
+                 System.out.print(" ");
+             }
+             //Each line needs an odd number of stars
+             for (int star = 1; star <= 2*row -1; star++){
+                 //Print the stars
+                 System.out.print("*");
+             }
+             System.out.println();
+         }
+         
+    }
+
+        
+}
