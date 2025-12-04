@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.finalproject;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class FinalProject {
+
+    public static void main(String[] args) {
+        
+       Scanner scan = new Scanner(System.in);
+       
+       //Answer options for each of the questions
+       int ChocolatePoint;
+       int VanillaPoint;
+       int StrawberryPoint;
+       int CoffeePoint;
+       
+       //Create the array list
+       
+       ArrayList <question> = new ArrayList<>();
+       
+       
+       
+       
+    }
+    
+    class Questions{
+        String question;
+        String[] answers;
+        int[] points;
+        
+        public Questions(String question, String[] answers, int[] points){
+            this.question = question;
+            this.answers = answers;
+            this.points = points; 
+        }
+        
+    }
+}
