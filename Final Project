@@ -18,26 +18,69 @@ public class FinalProject {
        Scanner scan = new Scanner(System.in);
        
        //Answer options for each of the questions
-       int ChocolatePoint;
-       int VanillaPoint;
-       int StrawberryPoint;
-       int CoffeePoint;
+       int ChocolatePoint = 0;
+       int VanillaPoint = 0;
+       int StrawberryPoint = 0;
+       int CoffeePoint = 0;
        
        //Create the array list
        
-       ArrayList <question> = new ArrayList<>();
+       ArrayList <Question> quiz = new ArrayList<>();
        
+       quiz.add(new Question(
+       " What time are you getting up?", 
+         new String[]{
+             "a. 6:30",
+             "b. 8:00", 
+             "c. 9:00",
+             "d. 10:30",
+         },
+          //Tally for the points based on the answer
+          new int[][]{
+              //If the answer is A then point for strawberry 
+              {0,0,1,0},
+              //If the answer is B then point for vanilla
+              {0,1,0,0},
+              //If the answer is C then point for chocolate
+              {1,0,0,0},
+              //If the answer is D then point for coffee
+              {0,0,0,1}
+              
+          }
+          
+       
+       ));
+       
+       quiz.add(new Question(
+       "What are you having for breakfast?",
+        new String[]{
+            "a. yogurt with granola",
+            "b. chocolate pancakes",
+            "c. french toast ",
+            "d. no breakfast",
+            
+        },
+        
+        new int[][]{
+            {0,0,1,0},
+            {0,1,0,0},
+            {1,0,0,0},
+            {0,0,0,1}
+                
+        }
+        
+    ));
        
        
        
     }
     
-    class Questions{
+    class Questions {
         String question;
         String[] answers;
-        int[] points;
+        int[][] points;
         
-        public Questions(String question, String[] answers, int[] points){
+        public Questions(String question, String[] answers, int[][] points){
             this.question = question;
             this.answers = answers;
             this.points = points; 
