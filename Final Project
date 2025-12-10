@@ -25,9 +25,9 @@ public class FinalProject {
        
        //Create the array list
        
-       ArrayList <Question> quiz = new ArrayList<>();
+       ArrayList <Questions> quiz = new ArrayList<>();
        
-       quiz.add(new Question(
+       quiz.add(new Questions(
        " What time are you getting up?", 
          new String[]{
              "a. 6:30",
@@ -51,7 +51,7 @@ public class FinalProject {
        
        ));
        
-       quiz.add(new Question(
+       quiz.add(new Questions(
        "What are you having for breakfast?",
         new String[]{
             "a. yogurt with granola",
@@ -71,11 +71,106 @@ public class FinalProject {
         
     ));
        
+       quiz.add(new Questions(
+       "Where are you going first?",
+        new String[]{
+            "a. the beach",
+            "b. friend's house",
+            "c. the pool",
+            "d. amusement park",
+            
+        },
+            
+        new int[][]{
+            {0,0,1,0},
+            {0,1,0,0},
+            {1,0,0,0},
+            {0,0,0,1}
+        }
        
+       ));
        
-    }
+       quiz.add(new Questions(
+       "What activity are you going to do?",
+        new String[]{
+            "a. play volleyball",
+            "b. just relax",
+            "c. read a book",
+            "d. go for a wlak"
+        },
+        
+        new int[][]{
+            {0,0,1,0},
+            {0,1,0,0},
+            {1,0,0,0},
+            {0,0,0,1},
+        }
+               
+       ));
+               
+       
+       //loop for the questions, and user input
+       //Show the question that the user has to answer
+       for (Questions x: quiz){
+           System.out.println(x.question);
+           //Shpw all the answer options for each question
+           for (String ans: x.answers){
+               System.out.println(ans);
+           }
+           //Tell the user to answer the question and type their answer option
+           System.out.print(" Choose one answer option and type the letter:  ");
+           String option = scan.nextLine().toLowerCase();
+           
+           //make a key for the answer 
+           int key = switch(option) {
+               case "a" -> 0;
+               case "b" -> 1;
+               case "c" -> 2;
+               case "d" -> 3;
+               default -> -1;
+           };
+           
+           if (key >= 0) {
+               ChocolatePoint += x.points[key][0];
+               VanillaPoint += x.points[key][1];
+               StrawberryPoint += x.points[key][2];
+               CoffeePoint += x.points[key] [3];
+               
+           }
+           else{
+               System.out.println("Error, Not a valid option");
+               
+           }
+           System.out.println();
+       } 
+       
+       int max = Math.max(Math.max(ChocolatePoint, VanillaPoint), Math.max(StrawberryPoint, CoffeePoint));
+       String flavor = "";
+       String description = "";
+       
+       if (max == ChocolatePoint) { 
+           flavor = "Chocolate";
+           description = "You always know what you want and you waste no time being indescisive";
+       }
+       else if (max == VanillaPoint) {
+           flavor = "Vanilla";
+           description = "You love to do all the classic things and stay true to what you like";
+       }
+       else if (max == StrawberryPoint) {
+           flavor = "Strawberry";
+           description = "You are full of energy and you like to have a lot of fun";
+       }
+       else if (max == CoffeePoint) {
+           flavor = "Coffee";
+           description = "You are sometimes bold but other times not as much but you are adventerous";
+       }
+       
+       //Print what the user's flavor is and the description
+       System.out.println("Your ice cream flavor: " + flavor);
+       System.out.println(description);
+    }  
     
-    class Questions {
+    static class Questions {
         String question;
         String[] answers;
         int[][] points;
@@ -87,4 +182,5 @@ public class FinalProject {
         }
         
     }
+    
 }
