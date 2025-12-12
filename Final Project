@@ -174,7 +174,7 @@ public class FinalProject {
                System.out.println(ans);
            }
            //Tell the user to answer the question and type their answer option
-           System.out.print(" Choose one answer option and type the letter:  ");
+           System.out.print(" Choose one answer option and type the letter then press enter:  ");
            String option = scan.nextLine().toLowerCase();
            
            //make a key for the answer 
