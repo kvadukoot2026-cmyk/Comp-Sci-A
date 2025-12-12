@@ -163,6 +163,23 @@ public class FinalProject {
             {0,0,0,1},
         }
        ));
+       //Question 8
+       quiz.add(new Questions(
+       "What is your favorite summer drink?",
+        new String[]{
+        "a. Lemonade",
+        "b. Iced Tea",
+        "c. Water",
+        "d. Smoothie",
+        },
+
+        new int [][]{
+            {0,0,1,0},
+            {0,1,0,0},
+            {1,0,0,0},
+            {0,0,0,1},
+        }
+       ));
                
        
        //loop for the questions, and user input
