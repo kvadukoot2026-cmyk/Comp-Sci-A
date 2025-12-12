@@ -16,6 +16,9 @@ public class FinalProject {
     public static void main(String[] args) {
         
        Scanner scan = new Scanner(System.in);
+       //Introductory message
+       System.out.println("Plan out your summer day and this quiz will tell you what ice cream flavor you are");
+       System.out.println();
        
        //Answer options for each of the questions
        int ChocolatePoint = 0;
@@ -149,7 +152,7 @@ public class FinalProject {
         new String[]{
         "a. Brownies",
         "b. Chocolate chip cookies",
-        "c. Ppcorn",
+        "c. Popcorn",
         "d. Ice cream",
         },
 
