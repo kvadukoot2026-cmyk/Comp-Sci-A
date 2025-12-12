@@ -26,7 +26,8 @@ public class FinalProject {
        //Create the array list
        
        ArrayList <Questions> quiz = new ArrayList<>();
-       
+ 
+  //Question 1     
        quiz.add(new Questions(
        " What time are you getting up?", 
          new String[]{
@@ -50,7 +51,7 @@ public class FinalProject {
           
        
        ));
-       
+       //Question 2
        quiz.add(new Questions(
        "What are you having for breakfast?",
         new String[]{
@@ -70,7 +71,7 @@ public class FinalProject {
         }
         
     ));
-       
+      //Question 3 
        quiz.add(new Questions(
        "Where are you going first?",
         new String[]{
@@ -89,7 +90,7 @@ public class FinalProject {
         }
        
        ));
-       
+       //Question 4
        quiz.add(new Questions(
        "What activity are you going to do?",
         new String[]{
@@ -106,6 +107,40 @@ public class FinalProject {
             {0,0,0,1},
         }
                
+       ));
+       //Question 5
+       quiz.add(new Questions(
+       "It's time for lunch, what are you going to eat?",
+        new String[]{
+        "a. Summer salad",
+        "b. A sandwhich",
+        "c. Tacos",
+        "d. Pasta",
+        },
+
+        new int[][]{
+            {0,0,1,0},
+            {0,1,0,0},
+            {1,0,0,0},
+            {0,0,0,1},
+        }
+       ));
+       //Question 6
+       quiz.add(new Questions(
+       "What will be your evening activity?",
+        new String[]{
+        "a. Sunset walk",
+        "b. Watch a movie",
+        "c. Bake something",
+        "d. Paint",
+        },
+
+        new int [][]{
+            {0,0,1,0},
+            {0,1,0,0},
+            {1,0,0,0},
+            {0,0,0,1},
+        }
        ));
                
        
