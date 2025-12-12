@@ -142,6 +142,24 @@ public class FinalProject {
             {0,0,0,1},
         }
        ));
+
+       //Question 7
+       quiz.add(new Questions(
+       "What will be your midnight snack?",
+        new String[]{
+        "a. Brownies",
+        "b. Chocolate chip cookies",
+        "c. Ppcorn",
+        "d. Ice cream",
+        },
+
+        new int [][]{
+            {0,0,1,0},
+            {0,1,0,0},
+            {1,0,0,0},
+            {0,0,0,1},
+        }
+       ));
                
        
        //loop for the questions, and user input
