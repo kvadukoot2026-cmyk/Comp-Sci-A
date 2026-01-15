@@ -1,0 +1,21 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.relationsassignment;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class RelationsAssignment {
+
+    public interface Priority {
+        void setPriority(int priority);
+        int getPriority();
+        
+        
+    }
+}
