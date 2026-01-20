@@ -1,0 +1,60 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.studentmain;
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class StudentMain {
+
+    public static void main(String[] args) {
+        Student st1 = new Student ("Bob" "Smith");
+        
+    }
+}
+
+class Student
+{
+    private String firstName, lastName;
+    Course c1 = new Course();
+    int s = c1.setScore(85);
+    
+    Course c2 = new Course();
+    int s2 = c2.setScore(90);
+    
+    Course c3 = new Course();
+    int s3 = c3.setScore(95);
+    
+    public Student()
+    {
+        firstName = "";
+        lastName = "";
+    }
+    
+    {
+        firstName = first;
+        lastName = last;
+    }
+    
+    public String toString()
+    {
+        String result;
+        result = firstName + " " + lastName + "\n";
+        return result;
+    }
+}
+class Course{
+    public int score = 0;
+    
+    public int setScore(int inScore){
+        score = inScore;
+        return score;
+    }
+    
+    public int getScore(){
+        return score;
+    }
+}
