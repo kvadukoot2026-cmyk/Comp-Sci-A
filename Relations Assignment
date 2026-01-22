@@ -2,20 +2,99 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.relationsassignment;
+package com.mycompany.relationsassignment2;
 
-import java.util.Scanner;
-
+import java.util.ArrayList;
+import java.util.Collections;
 /**
  *
  * @author KVadukoot2026
  */
-public class RelationsAssignment {
+public class RelationsAssignment2 {
 
-    public interface Priority {
-        void setPriority(int priority);
-        int getPriority();
+    public static void main(String[] args) {
+        
+        task t1, t2, t3, t4, t5;
+       //List of tasks for the user 
+        t1 = new task("Doing laundry");
+        t1.setPriority(3);
+        t1.setComplexity(2);
+        
+        t2 = new task("Study for test");
+        t2.setPriority(1);
+        t2.setComplexity(4);
+        
+        
+        t3 = new task("Make dinner");
+        t3.setPriority(5);
+        t3.setComplexity(3);
+        
+        
+        t4 = new task("Do homework");
+        t4.setPriority(2);
+        t4.setComplexity(3);
+        
+        
+        t5 = new task("Walk the dog");
+        t5.setPriority(4);
+        t5.setComplexity(1);
+        
+        ArrayList<task> tasks = new ArrayList<>();
+        tasks.add(t1);
+        tasks.add(t2);
+        tasks.add(t3);
+        tasks.add(t4);
+        tasks.add(t5);
+        
+        Collections.sort(tasks);
+        
+        System.out.println("The tasks will be sorted by priority and complexity. This is the list: ");
+                for (task t : tasks){
+                    System.out.println(t.getTask() + " (Priority: " + t.getPriority() + 
+                            ", Complexity: " + t.getComplexity() + ")");
+                }
+        
+        
         
         
     }
+}
+
+    class Task implements Priority, Complexity, Comparable <Task>{
+        private String task;
+        private int priorityLevel;
+        private int complexityLevel;
+        
+        public Task(String taskName) {
+            task = taskName;
+            priorityLevel = 1;
+            complexityLevel = 1;
+        }
+        
+        public void setPriority(int level){
+            priorityLevel = level;
+        }
+        
+        public int getPriority(){
+            return priorityLevel;
+        }
+        
+        public void setComplexity(int level){
+            complexityLevel = level;
+        }
+        
+        public int getComplexity(){
+            return complexityLevel;
+    }
+        public String getTask(){
+            return task;
+        }
+        
+        public int compareTo(Task other){
+            if (this.priorityLevel != other.priorityLevel)
+                return this.priorityLevel - other.priorityLevel;
+            else
+                return this.complexityLevel - other.complexityLevel;
+        }
+
 }
