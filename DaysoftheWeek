@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.daysoftheweek;
+
+
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class DaysoftheWeek {
+
+    public static void main(String[] args) {
+        //Create a string for the days of the week
+       String[] weekDays = new String [7];
+       //Make a string for the resize of the array
+       String[] temp;
+       
+       weekDays[0] = "Monday";
+       weekDays[1] = "Tuesday";
+       weekDays[2] = "Wednesday";
+       weekDays[3] = "Thursday";
+       weekDays[4] = "Friday";
+       weekDays[5] = "Satuday";
+       weekDays[6] = "Sunday";
+       
+       //resizing the array
+       
+       
+       temp = new String[5];
+       arrweekDays = temp;
+       for(int d =0; d < weekDays; d++){
+           temp[d] = arrweekDays[d];
+       }
+    }
+}
