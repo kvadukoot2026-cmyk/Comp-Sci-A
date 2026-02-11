@@ -25,13 +25,16 @@ public class DaysoftheWeek {
        weekDays[5] = "Satuday";
        weekDays[6] = "Sunday";
        
+       //Print every day of the week. One day per line
+       System.out.println(weekDays[0] + "\n" + weekDays[1] + "\n" + weekDays[2] + "\n" + weekDays[3] + "\n" + weekDays[4] + "\n" + weekDays[5] + "\n" + weekDays[6] + "\n" );
+       
        //resizing the array
-       
-       
        temp = new String[5];
-       arrweekDays = temp;
-       for(int d =0; d < weekDays; d++){
-           temp[d] = arrweekDays[d];
+       for(int d =0; d < 5; d++){
+           temp[d] = weekDays[d];
        }
+       weekDays = temp;
+       //Print the weekdays only, no Saturday and Sunday
+       System.out.println(weekDays[0] + "\n" + weekDays[1] + "\n" + weekDays[2] + "\n" + weekDays[3] + "\n" + weekDays[4] + "\n" );
     }
 }
