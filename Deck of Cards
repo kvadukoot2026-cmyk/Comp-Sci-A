@@ -1,0 +1,58 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.deckofcards;
+
+import java.util.*;
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class DeckOfCards {
+
+    public static void main(String[] args) {
+        //Make a random generator
+        Random rand = new Random();
+        //Make a general string for the 4 suits with 13 cards each 
+        /*
+        String[][] DeckofCards = 
+        {
+            {"Ace of diamonds", "2 of diamonds", "3 of diamonds", "4 of diamonds", "5 of diamonds", "6 of diamonds", "7 of diamonds", "8 of diamonds", "9 of diamonds", "10 of diamonds", "Jack of diamonds", "Queen of diamonds", "King of diamonds"}
+                
+        };
+        */
+        String[][] deckOfCards = new String[4][13];
+        String suit = "";
+        for(int i = 0; i<deckOfCards.length; i++){
+            if( i==0)
+                suit = "diamonds";
+            else if(i==1)
+                suit = "hearts";
+            else if(i==2)
+                suit = "spades";
+            else if(i==3)
+                suit = "clubs";
+            for(int j = 0; j<deckOfCards[0].length; j++){
+                deckOfCards[i][j]= (j + 1) + " Of " + suit;
+            }
+        }
+        ArrayList alDeck = new ArrayList<String>();
+        for(int i = 0; i<deckOfCards.length; i++){
+            for(int j = 0; j<deckOfCards[i].length; j++)
+                //System.out.println(deckOfCards[i][j]);
+                alDeck.add(deckOfCards[i][j]);
+        }
+        //Shuffle the cards
+        for (int i =0; i<deckOfCards.length; i++){
+            for (int j =0; j<deckOfCards[i].length; j++){
+                int randomSuit = rand.nextInt(4);
+                int randomRank = rand.nextInt(13);
+                
+                String temp = deckOfCards[randomSuit][randomRank];
+                deckOfCards[randomSuit][randomRank] = deckOfCards[i][j];
+                deckOfCards[i][j] = temp;
+            }
+        }
+    }
+}
