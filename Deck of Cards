@@ -54,5 +54,24 @@ public class DeckOfCards {
                 deckOfCards[i][j] = temp;
             }
         }
+        
+        //Deal 4 hands with 5 cards each
+        
+        String [][] hands = new String [4][5];
+        int cardIndex =0;
+        for(int i=0; i<4; i++){
+            for(int c =0; c<5; c++){
+                int suitIndex = cardIndex / 13;
+                int rankIndex = cardIndex % 13;
+                hands[i][c] = deckOfCards[suitIndex][rankIndex];
+                cardIndex++;
+            }
+        }
+        
+        String[]playerNames = {"Player 1 (Diamonds)", "Player 2 (Hearts)", "Player 3 (Clubs)", "Player 4 (Spades)"};
+        for (int i=0; i<4; i++){
+            System.out.println(playerNames[i] + ":" + Arrays.toString(hands[i]));
+        }
     }
 }
+
