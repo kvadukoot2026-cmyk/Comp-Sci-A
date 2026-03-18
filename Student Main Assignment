@@ -4,57 +4,121 @@
 
 package com.mycompany.studentmain;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author KVadukoot2026
  */
 public class StudentMain {
-
     public static void main(String[] args) {
-        Student st1 = new Student ("Bob" "Smith");
-        
+//Make a scanner and array list
+        Scanner input = new Scanner (System.in);
+        ArrayList<Student> students = new ArrayList<>();
+//Enter a student fist and last name in the system
+System.out.print("Student first name:" );
+//String for the first name
+String first = input.nextLine();
+//Do the same for last name
+System.out.print("Student last name: " );
+String last = input.nextLine();
+
+Student s1 = new Student(first, last);
+
+//Scores for the classes
+for (int j=0; j < 3; j++) {
+    System.out.print("Enter the score for the course" + (j + 1) + ":");
+    int score = input.nextInt();
+    s1.setTestScore( j, score);
+       
+}
+//Add student 1
+students.add(s1);
+
+for (Student s : students) {
+    System.out.println(s);
     }
+  }
 }
 
 class Student
 {
+//Make a string for the names 
     private String firstName, lastName;
-    Course c1 = new Course();
-    int s = c1.setScore(85);
-    
-    Course c2 = new Course();
-    int s2 = c2.setScore(90);
-    
-    Course c3 = new Course();
-    int s3 = c3.setScore(95);
-    
-    public Student()
-    {
-        firstName = "";
-        lastName = "";
-    }
-    
-    {
-        firstName = first;
-        lastName = last;
-    }
-    
-    public String toString()
-    {
-        String result;
-        result = firstName + " " + lastName + "\n";
-        return result;
+    private Course[] courses; 
+
+public Student() {
+    firstName = "";
+    lastName = "";
+    courses = new Course[3];
+    for (int j=0; j < 3; j++) {
+        courses[j] = new Course();
     }
 }
+
+public Student(String first, String last) {
+    firstName = first;
+    lastName = last;
+    courses = new Course[3];
+    for (int j=0; j < 3; j++) {
+        courses[j] = new Course();
+    }
+}
+
+public void setTestScore(int courseIndex, int score) {
+    courses[courseIndex].setTestScore(scoore);
+}
+
+pubic int getTestScore(int courseIndex) {
+    return courses[courseIndex].getTestScore();
+}
+
+//Calculate the averages
+
+public double getAverage() {
+    int total = 0;
+    for (Course c: courses) {
+        total += c.getTestScore();
+    }
+    return total / 3.0;
+}
+
+//toString
+
+public String toString( {
+    String result = firstName + " " + lastName + "\n";
+    for (int j = 0; j < 3; j++) {
+        result += "Course" + (j + 1) + "Score: " + courses[j].getTestScore() + "\n";
+    }
+    result += "Average: " + getAverage() + "\n";
+    return result;
+}
+
+    
+}
 class Course{
-    public int score = 0;
-    
-    public int setScore(int inScore){
-        score = inScore;
-        return score;
+    public int testScore;
+
+    public Course() {
+        testScore = 0;
     }
+
+    public Course (int score) {
+        testScore = score;
+}
+
+    public void setTestScore(int score) {
+        testScore = score;
+}
+
+    public void setTestScore(int score) {
+        testScore = score;
+}
+
+    public int getTestScore() {
+        return testScore;
+}
     
-    public int getScore(){
-        return score;
-    }
+    
 }
