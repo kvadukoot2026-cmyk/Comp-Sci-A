@@ -1,0 +1,44 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.pacaltriangleassignment;
+
+import java.util.Arrays;
+/**
+ *
+ * @author KVadukoot2026
+ */
+public class PacalTriangleAssignment {
+
+    public int[] getRow(int n) {
+        
+        if(n == 0) {
+            return new int[]{1};
+        }
+       
+        int[] currentRow = new int[n+1];
+        currentRow[0] = 1;
+        currentRow[n] = 1;
+        
+        for (int i=1; i < n; i++) {
+            currentRow[i] = prevRow[i - 1] + prevRow[i];
+        }
+        return currentRow;
+        
+        }
+    
+    public static void main(String[] args) {
+        
+        int n = 5;
+        
+        int[] result = getRow(n);
+        
+        System.out.println("Row" + n + "of Pascal's Triangle");
+        System.out.println(Arrays.toString(result));
+    }
+        
+        
+        
+        
+    }
